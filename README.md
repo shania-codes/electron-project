@@ -1,5 +1,3 @@
-Note: Work in progress
-
 # Minimacro
 Calorie and macro tracker inspired by the mobile app [CalMacro](https://calmacro.com)
 
