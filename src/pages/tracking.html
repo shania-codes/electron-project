@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Minimacro - Tracking</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <script src="../scripts/tracking.js" defer></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Food Tracking</h1>
+
+            <div class="daily-summary">
+                <h2>Daily Totals</h2>
+                
+                <div class="macro-section">
+                    <div class="macro-item">
+                        <p>Calories: <span id="totalCalories">0</span>/<span id="targetCalories">0</span>kcal</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="caloriesProgress"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="macro-item">
+                        <p>Protein: <span id="totalProtein">0</span>/<span id="targetProtein">0</span>g</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="proteinProgress"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="macro-item">
+                        <p>Carbs: <span id="totalCarbs">0</span>/<span id="targetCarbs">0</span>g</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="carbsProgress"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="macro-item">
+                        <p>Fat: <span id="totalFat">0</span>/<span id="targetFat">0</span>g</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="fatProgress"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="goals-section">
+                    <button id="setupGoalsBtn" class="setup-goals-btn">Setup Goals</button>
+                    <button id="chartsBtn" class="charts-btn">View Charts</button>
+                </div>
+            </div>
+
+            <form id="foodForm">
+                <div class="autocomplete-container">
+                    <label for="foodName">Food Name:</label>
+                    <input type="text" id="foodName" name="foodName" autocomplete="off">
+                    <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
+                </div>
+
+                <div>
+                    <label for="servingSize">Serving Size:</label>
+                    <input type="number" id="servingSize" name="servingSize" step="0.1">
+                </div>
+
+                <div>
+                    <label for="servingUnit">Serving Unit:</label>
+                    <input type="text" id="servingUnit" name="servingUnit" placeholder="e.g., cup, slice, piece">
+                </div>
+
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" step="0.1" value="1" min="0.1">
+                </div>
+
+                <div>
+                    <label for="calories">Calories (per serving):</label>
+                    <input type="number" id="calories" name="calories" step="0.1">
+                </div>
+
+                <div>
+                    <label for="protein">Protein (g per serving):</label>
+                    <input type="number" id="protein" name="protein" step="0.1">
+                </div>
+
+                <div>
+                    <label for="carbs">Carbs (g per serving):</label>
+                    <input type="number" id="carbs" name="carbs" step="0.1">
+                </div>
+
+                <div>
+                    <label for="fat">Fat (g per serving):</label>
+                    <input type="number" id="fat" name="fat" step="0.1">
+                </div>
+
+                <div>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" step="0.01">
+                </div>
+
+                <div>
+                    <label for="store">Store:</label>
+                    <input type="text" id="store" name="store">
+                </div>
+
+                <div>
+                    <label for="useBy">Use By:</label>
+                    <input type="date" id="useBy" name="useBy">
+                </div>
+
+                <div>
+                    <label for="purchaseDate">Purchase Date:</label>
+                    <input type="date" id="purchaseDate" name="purchaseDate">
+                </div>
+
+                <button type="submit" id="addFoodButton">Add Food</button>
+            </form>
+
+            <div class="food-list">
+                <h2>Today's Foods</h2>
+                <table id="foodTable">
+                    <thead>
+                        <tr>
+                            <th>Food Name</th>
+                            <th>Quantity</th>
+                            <th>Calories</th>
+                            <th>Protein</th>
+                            <th>Carbs</th>
+                            <th>Fat</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="foodTableBody">
+                        <!-- Food entries will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
