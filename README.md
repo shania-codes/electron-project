@@ -6,7 +6,7 @@ Calorie and macro tracker inspired by the mobile app [CalMacro](https://calmacro
 
 ## Build instruction 
 [Install Node.js](https://nodejs.org/en/download/)  
-git clone https://github.com/shania-codes/minimacro  
+git clone https://github.com/shania-codes/electron-project  
 cd minimacro  
 npm install  
 npm run make  
