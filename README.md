@@ -9,4 +9,5 @@ Calorie and macro tracker inspired by the mobile app [CalMacro](https://calmacro
 git clone https://github.com/shania-codes/electron-project  
 cd minimacro  
 npm install  
-npm run start
+npm run start (to test the program)
+npm run make (to create a distributable)
